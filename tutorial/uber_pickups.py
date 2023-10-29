@@ -35,3 +35,7 @@ data_load_state.text("Done! (using st.cache_data)")
 st.subheader('Raw data')
 # print raw data
 st.write(data)
+
+# drawing histogram
+#add subheader
+st.subheader('Number of pickups by hour')
