@@ -1,3 +1,7 @@
+# adding pages
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
+
 # Using data to create a table:
 
 import streamlit as st
