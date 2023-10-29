@@ -11,14 +11,13 @@ st.run https://github.com/Elena-Davies/Exoplanet-Detection-Workshop/blob/tutoria
 # Gather example data
 
 DATE_COLUMN = 'date/time'
-DATA_URL = ('https://s3-us-west-2.amazonaws.com/'
-         'streamlit-demo-data/uber-raw-data-sep14.csv.gz')
+DATA_URL = ('https://s3-us-west-2.amazonaws.com/''streamlit-demo-data/uber-raw-data-sep14.csv.gz')
 
 # Caching
 @st.cache_data
 def load_data(nrows):
     data = pd.read_csv(DATA_URL, nrows=nrows)
-    lowercase = lambda x: str(x).lower()
+   lowercase = lambda x: str(x).lower()
     data.rename(lowercase, axis='columns', inplace=True)
     data[DATE_COLUMN] = pd.to_datetime(data[DATE_COLUMN])
     return data
@@ -39,3 +38,9 @@ st.write(data)
 # drawing histogram
 #add subheader
 st.subheader('Number of pickups by hour')
+
+# using numpy to generate histogram that breaks down pickup times binned by hour:
+hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
+
+# use streamlit barchart to draw the histogram
+st.bar_chart(hist_values)
