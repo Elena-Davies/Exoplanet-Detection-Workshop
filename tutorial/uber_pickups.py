@@ -6,4 +6,4 @@ import numpy as np
 st.title('Uber pickups in NYC')
 
 # run streamlit
-st.run uber_pickups.py
+st.run tutorial/uber_pickups.py
