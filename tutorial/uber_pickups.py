@@ -48,3 +48,6 @@ st.bar_chart(hist_values)
 # plot data on a map
 # add subheader
 st.subheader('Map of all pickups')
+
+# plotting the data
+st.map(data)
