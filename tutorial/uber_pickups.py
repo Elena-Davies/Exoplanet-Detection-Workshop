@@ -30,3 +30,8 @@ data = load_data(10000)
 # Notify the reader that the data was successfully loaded.
 data_load_state.text("Done! (using st.cache_data)")
 
+# inspecting the raw data
+# add subheader
+st.subheader('Raw data')
+# print raw data
+st.write(data)
