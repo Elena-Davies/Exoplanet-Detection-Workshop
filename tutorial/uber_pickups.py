@@ -44,3 +44,7 @@ hist_values = np.histogram(data[DATE_COLUMN].dt.hour, bins=24, range=(0,24))[0]
 
 # use streamlit barchart to draw the histogram
 st.bar_chart(hist_values)
+
+# plot data on a map
+# add subheader
+st.subheader('Map of all pickups')
