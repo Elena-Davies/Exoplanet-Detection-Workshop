@@ -6,7 +6,7 @@ import numpy as np
 st.title('Uber pickups in NYC')
 
 # run streamlit
-st.run https://raw.githubusercontent.com/Elena-Davies/Exoplanet-Detection-Workshop/tutorial/tutorial/uber_pickups.py
+# st.run https://raw.githubusercontent.com/Elena-Davies/Exoplanet-Detection-Workshop/tutorial/tutorial/uber_pickups.py
 
 # Gather example data
 DATE_COLUMN = 'date/time'
