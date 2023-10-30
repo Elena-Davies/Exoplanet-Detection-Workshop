@@ -26,7 +26,7 @@ st.dataframe(dataframe)
 
 dataframe2 = pd.DataFrame(np.random.randn(10,20),columns=('col %d' % i for i in range(20)))
 
-st.dataframe2(dataframe.style.highlight_max(axis=0))
+st.dataframe(dataframe.style.highlight_max(axis=0))
 
 dataframe3 = pd.DataFrame(np.random.randn(10,20),columns=('col %d' % i for i in range(20)))
 st.table(dataframe3)
