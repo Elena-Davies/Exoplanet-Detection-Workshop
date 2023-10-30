@@ -11,7 +11,7 @@ df = pd.DataFrame({'first column': [1,2,3,4],'second column':[10,20,30,40]})
 df
 
 # run streamlit
-st.run https://raw.githubusercontent.com/Elena-Davies/Exoplanet-Detection-Workshop/tutorial/tutorial/tutorial.py
+# st.run https://raw.githubusercontent.com/Elena-Davies/Exoplanet-Detection-Workshop/tutorial/tutorial/tutorial.py
 
 # Write a data frame
 
