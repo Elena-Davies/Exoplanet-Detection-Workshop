@@ -11,10 +11,6 @@ mpl.use("agg")
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
-# Need to lock plots to be more thread-safe
-from matplotlib.backends.backend_agg import RendererAgg
-lock = RendererAgg.lock
-
 # Title the app
 apptitle = 'Week 5 Practice'
 st.title(apptitle)
@@ -27,9 +23,8 @@ time = np.arange(0, 10, 0.1);
 # Amplitude of the sine wave is sine of a variable like time
 ampltiude = np.sin(time)
 # Plot a sine wave using time and amplitude obtained for the sine wave
-with lock:
-    sinewave = plt.plot(time, ampltiude)
-    st.pyplot(sinewave)
+sinewave = plt.plot(time, ampltiude)
+st.pyplot(sinewave)
 # Give a title for the sine wave plot
 plt.title('Sine wave')
 # Give x axis label for the sine wave plot
