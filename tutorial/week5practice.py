@@ -10,7 +10,7 @@ st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
 # Configuring page
-st.set_page_config(page_title="Main Page", page_icon="🎈")
+st.set_page_config(page_title="Main Page", page_icon=":balloon")
 
 # Title the app
 apptitle = 'Week 5 Practice'
