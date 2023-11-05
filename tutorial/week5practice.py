@@ -17,3 +17,19 @@ ampltiude = np.sin(time)
 
 # Plot a sine wave using time and amplitude obtained for the sine wave
 plt.plot(time, ampltiude)
+
+# Give a title for the sine wave plot
+plt.title('Sine wave')
+
+# Give x axis label for the sine wave plot
+plt.xlabel('Time (s)')
+
+# Give y axis label for the sine wave plot
+plt.ylabel('Amplitude = sin(time) (m)')
+
+# Make the plot look presentable
+plt.grid(True, which='both')
+plt.axhline(y=0, color='k')
+
+#Display the sine wave
+plt.show()
