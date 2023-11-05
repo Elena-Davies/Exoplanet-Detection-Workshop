@@ -47,7 +47,10 @@ if section==1:
         progress_bar.progress(i) # when progress bar is complete show "complete"
         time.sleep(0.05)
 
-    progress_bar.empty() # when progress bar is complete, progress bar disappears or becomes empty
+    progress_bar.empty() # clear elements by calling them empty
+    st.button("Re-run") # re-run animation
+
+time_range = st.slider("")
 
 if section==2:
     # spectra
