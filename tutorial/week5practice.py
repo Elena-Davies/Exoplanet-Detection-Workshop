@@ -20,6 +20,10 @@ st.write("Here's a sin wave")
 # Plotting sine wave
 # Get x values of the sine wave
 time = np.arange(0, 10, 0.1);
+
+# Create slider
+timeslider = st.select_slider('Select a value for time', options=[time])
+st.write('You selected', timeslider, 'as your value for time')
 # Amplitude of the sine wave is sine of a variable like time
 ampltiude = np.sin(time)
 # Plot a sine wave using time and amplitude obtained for the sine wave
