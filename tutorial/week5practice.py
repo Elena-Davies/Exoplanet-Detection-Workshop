@@ -9,9 +9,6 @@ import time
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
-# Configure the page
-st.set_page_config(page_title='Main Page', page_icon=":eyeglasses:")
-
 # Title the app
 st.title('Week 5 Practice')
 
