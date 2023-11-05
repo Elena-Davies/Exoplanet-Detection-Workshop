@@ -53,3 +53,18 @@ if section==2:
     # spectra
     
     st.markdown("Here's the emission sectrum of k2-18b and several elements, match the overall spectrum to each element's spectra")
+
+if section==3:
+    # transit
+    st.markdown("Here is a transit curve of k2-18b")
+    st.markdown("Why is the bottom of a light curve important?")
+    needhint = st.checkbox("Need a hint?", value=False)
+
+    if needhint:
+        st.markdown("Think about what the curve means, if the transit curve shows the exoplanet orbiting in front of the star")
+
+    st.markdown("How can you see how far an exoplanet is away from its host star?")
+    answer = st.checkbox("See the answer", value=False)
+
+    if answer:
+        st.markdown("You can the distance the exoplanet is from the host star if it has a long transit event. The longer the transit event, the further the exoplanet is from its host star!")
