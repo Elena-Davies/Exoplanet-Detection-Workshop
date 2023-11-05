@@ -15,31 +15,44 @@ st.set_page_config(page_title='Main Page', page_icon=":eyeglasses:")
 # Title the app
 st.title('Week 5 Practice')
 
-# Define section names
-sectionnames = ['Main Page', 'Spectra', 'Transit']
+# Define section titles
+sectiontitles = ['Main Page', 'Spectra', 'Transit']
 
-# Define headerlabel
-def headerlabel(number):
-    return "{0}: {1}".format(number, sectionnames[number-1])
+# Define section titles
+def sectiontitle(number):
+    return "{0}: {1}".format(number, sectiontitles[number-1])
 
-# Add text
-st.write("Here's how a sine wave changes with time")
+# Define section
+section = st.radio('Select section:', [1,2,3], format_func=sectiontitle)
 
-# Add progress bar in sidebar
-progress_bar = st.sidebar.progress(0)
-status_text = st.sidebar.empty()
+# Write section headers
+st.markdown("## {}".format(sectiontitle(section)))
 
-# Set up empty chart
-chart = st.line_chart(np.zeros(shape=(1,1)))
-# x values
-x = np.arange(0, 100*np.pi, 0.1)
+if section==1:
 
-# Animation 
-for i in range(1,101):
-    y = np.sin(x[i]) # y values
-    status_text.text("%i%% Complete" % i)
-    chart.add_rows([y]) # add each value
-    progress_bar.progress(i) # when progress bar is complete show "complete"
-    time.sleep(0.05)
+    # Add text
+    st.write("Here's how a sine wave changes with time")
 
-progress_bar.empty() # when progress bar is complete, progress bar disappears or becomes empty
+    # Add progress bar in sidebar
+    progress_bar = st.sidebar.progress(0)
+    status_text = st.sidebar.empty()
+
+    # Set up empty chart
+    chart = st.line_chart(np.zeros(shape=(1,1)))
+    # x values
+    x = np.arange(0, 100*np.pi, 0.1)
+
+    # Animation 
+    for i in range(1,101):
+        y = np.sin(x[i]) # y values
+        status_text.text("%i%% Complete" % i)
+        chart.add_rows([y]) # add each value
+        progress_bar.progress(i) # when progress bar is complete show "complete"
+        time.sleep(0.05)
+
+    progress_bar.empty() # when progress bar is complete, progress bar disappears or becomes empty
+
+if section==2:
+    # spectra
+    
+    st.markdown("Here's the emission sectrum of k2-18b and several elements, match the overall spectrum to each element's spectra")
