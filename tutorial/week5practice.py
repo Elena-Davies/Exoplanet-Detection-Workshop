@@ -13,6 +13,8 @@ st.sidebar.markdown("# Main page 🎈")
 apptitle = 'Week 5 Practice'
 st.title(apptitle)
 
+st.write("Here's how a sine wave changes with time")
+
 progress_bar = st.sidebar.progress(0)
 status_text = st.sidebar.empty()
 
