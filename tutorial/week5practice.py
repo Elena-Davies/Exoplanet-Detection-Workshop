@@ -15,6 +15,8 @@ st.set_page_config(page_title='Main Page', page_icon=":eyeglasses:")
 # Title the app
 st.title('Week 5 Practice')
 
+sectionnames = ['Main Page', 'Spectra', 'Transit']
+
 # Add text
 st.write("Here's how a sine wave changes with time")
 
