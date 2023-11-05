@@ -16,6 +16,10 @@ apptitle = 'Week 5 Practice'
 st.title(apptitle)
 
 # Plotting sine wave
+# Change range for time
+st.sidebar.markdown("## Select range for time")
+start_time, end_time = st.select_slider('Select the time range', options=['1','2','3','4','5','6','7','8','9','10'],value=('1','10'))
+st.write('You selected time between', start_time, 'seconds and', end_time, 'seconds.')
 # Get x values of the sine wave
 time = np.arange(0, 10, 0.1);
 # Amplitude of the sine wave is sine of a variable like time
