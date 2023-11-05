@@ -3,9 +3,7 @@ import streamlit as st
 import numpy as np
 import matplotlib as mpl
 import matplotlib.pyplot as plt
-
-# Use Agg backend to be thread safe
-mpl.use("agg")
+import time
 
 # adding pages
 st.markdown("# Main page 🎈")
@@ -15,12 +13,17 @@ st.sidebar.markdown("# Main page 🎈")
 apptitle = 'Week 5 Practice'
 st.title(apptitle)
 
-# Plotting sine wave
-# Get x values of the sine wave
-time = np.arange(0, 10, 0.1);
-# Amplitude of the sine wave is sine of a variable like time
-ampltiude = np.sin(time)
-# Plot a sine wave using time and amplitude obtained for the sine wave
-sinewave = plt.plot(time, ampltiude)
-st.pyplot(sinewave)
+progress_bar = st.sidebar.progress(0)
+status_text = st.sidebar.empty()
 
+chart = st.line_chart(np.zeros(shape=(1,1)))
+x = np.arange(0, 100*np.pi, 0.1)
+
+for i in range(1,101):
+    y = np.sin(x[i])
+    status_text.text("%i%% Complete" % i)
+    chart.add_rows([y])
+    progress_bar.progress(i)
+    time.sleep(0.05)
+
+progress_bar.empty()
