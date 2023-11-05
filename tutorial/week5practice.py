@@ -9,9 +9,11 @@ import time
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
+# Configure the page
+st.set_page_config(page_title='Main Page', page_icon=":balloon:")
+
 # Title the app
-apptitle = 'Week 5 Practice'
-st.title(apptitle)
+st.title('Week 5 Practice')
 
 # Add text
 st.write("Here's how a sine wave changes with time")
