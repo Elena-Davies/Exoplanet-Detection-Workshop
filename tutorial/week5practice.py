@@ -15,7 +15,12 @@ st.set_page_config(page_title='Main Page', page_icon=":eyeglasses:")
 # Title the app
 st.title('Week 5 Practice')
 
+# Define section names
 sectionnames = ['Main Page', 'Spectra', 'Transit']
+
+# Define headerlabel
+def headerlabel(number):
+    return "{0}: {1}".format(number, sectionnames[number-1])
 
 # Add text
 st.write("Here's how a sine wave changes with time")
