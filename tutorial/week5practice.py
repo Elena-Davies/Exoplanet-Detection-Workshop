@@ -62,7 +62,18 @@ frequency = st.slider("Value for frequency", 1, 100, 9)
 # Ampltiude of the sine wave is sine of a variable like time
 amplitude = np.sin(frequency*time)
 # Plot a sine wave using time and amplitude obtaine for the sine wave
-st.line_chart(x=time,y=amplitude)
+sinewave = plt.plot(time,amplitude)
+# savefig
+savefig = plt.savefig('sinewave.png')
+# use the non-interactive Agg backend to be more thread safe
+mpl.use("agg")
+from matplotlib.backends.backend_agg import RendererAgg
+_lock = RendererAgg.lock
+
+# display the sine wave
+with _lock:
+    st.pyplot(sinewave)
+
 
 if section==2:
     # spectra
