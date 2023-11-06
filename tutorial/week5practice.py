@@ -72,8 +72,8 @@ if section==1:
     savefig = plt.savefig('sinewave.png')
  
     # display the sine wave
-    #with _lock:
-    #    st.pyplot(sinewave)
+    with _lock:
+             st.pyplot(sinewave)
 
 
 if section==2:
