@@ -55,8 +55,11 @@ st.markdown("Sine waves are given by the equations: Asin(wt) where A is the ampl
 
 # Get x values of the sine wave
 time = np.arange(0, 10, 0.1);
+
+# frequency slider
+frequency = st.slider("Value for frequency", 1, 100, 9)
 # Ampltiude of the sine wave is sine of a variable like time
-amplitude = np.sin(time)
+amplitude = np.sin(frequency*time)
 # Plot a sine wave using time and amplitude obtaine for the sine wave
 sinewave = plt.plot(time,amplitude)
 
