@@ -69,7 +69,7 @@ if section==1:
     # Plot a sine wave using time and amplitude obtaine for the sine wave
     sinewave = plt.plot(time,amplitude)
     # savefig
-    savefig = plt.savefig('sinewave.png')
+    #savefig = plt.savefig('sinewave.png')
  
     # display the sine wave
     with _lock:
