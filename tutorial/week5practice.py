@@ -50,24 +50,24 @@ if section==1:
     progress_bar.empty() # clear elements by calling them empty
     st.button("Re-run") # re-run animation
 
-st.markdown("Here is a sine wave")
-st.markdown("Sine waves are given by the equations: Asin(wt) where A is the ampltiude, w (omega) is the frequency and t is the time")
+#st.markdown("Here is a sine wave")
+#st.markdown("Sine waves are given by the equations: Asin(wt) where A is the ampltiude, w (omega) is the frequency and t is the time")
 
 # Get x values of the sine wave
-time = np.arange(0, 10, 0.1);
+#time = np.arange(0, 10, 0.1);
 
 # frequency slider
-frequency = st.slider("Value for frequency", 1, 100, 9)
+#frequency = st.slider("Value for frequency", 1, 100, 9)
 
 # Ampltiude of the sine wave is sine of a variable like time
-amplitude = np.sin(frequency*time)
+#amplitude = np.sin(frequency*time)
 # Plot a sine wave using time and amplitude obtaine for the sine wave
-sinewave = plt.plot(time,amplitude)
+#sinewave = plt.plot(time,amplitude)
 # savefig
-savefig = plt.savefig('sinewave.png')
+#savefig = plt.savefig('sinewave.png')
 # use the non-interactive Agg backend to be more thread safe
-mpl.use("agg")
-from matplotlib.backends.backend_agg import RendererAgg
+#mpl.use("agg")
+#from matplotlib.backends.backend_agg import RendererAgg
 #_lock = RendererAgg.lock
 
 # display the sine wave
