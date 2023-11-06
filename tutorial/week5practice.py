@@ -1,7 +1,7 @@
 #Imports
 import streamlit as st
 import numpy as np
-import matplotlib as mpl
+#import matplotlib as mpl
 import matplotlib.pyplot as plt
 import time
 
@@ -66,8 +66,8 @@ if section==1:
     # savefig
     savefig = plt.savefig('sinewave.png')
     # use the non-interactive Agg backend to be more thread safe
-    mpl.use("agg")
-    from matplotlib.backends.backend_agg import RendererAgg
+    #mpl.use("agg")
+    #from matplotlib.backends.backend_agg import RendererAgg
     #_lock = RendererAgg.lock
 
     # display the sine wave
