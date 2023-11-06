@@ -5,8 +5,6 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import time
 
-
-
 # adding pages
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
