@@ -62,7 +62,8 @@ frequency = st.slider("Value for frequency", 1, 100, 9)
 amplitude = np.sin(frequency*time)
 # Plot a sine wave using time and amplitude obtaine for the sine wave
 sinewave = plt.plot(time,amplitude)
-
+# display the sine wave
+st.pyplot(sinewave)
 
 if section==2:
     # spectra
