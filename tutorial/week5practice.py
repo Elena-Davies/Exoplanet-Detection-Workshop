@@ -59,7 +59,7 @@ if section==1:
     st.markdown("Sine waves are given by the equations: Asin(wt) where A is the ampltiude, w (omega) is the frequency and t is the time")
 
     # Get x values of the sine wave
-    time = np.arange(0, 10, 0.1);
+    time = np.arange(0, 10, 0.001);
 
     # frequency slider
     frequency = st.slider("Value for frequency", 1, 100, 9)
@@ -67,13 +67,15 @@ if section==1:
     # Ampltiude of the sine wave is sine of a variable like time
     amplitude = np.sin(frequency*time)
     # Plot a sine wave using time and amplitude obtaine for the sine wave
-    sinewave = plt.plot(time,amplitude)
-    # savefig
-    #savefig = plt.savefig('sinewave.png')
- 
-    # display the sine wave
     with _lock:
-             st.pyplot(sinewave)
+        fig=plt.figure()
+        sinewave = plt.plot(time,amplitude)
+        # savefig
+        #savefig = plt.savefig('sinewave.png')
+    
+        # display the sine wave
+    
+        st.pyplot(fig)
 
 
 if section==2:
