@@ -68,11 +68,11 @@ savefig = plt.savefig('sinewave.png')
 # use the non-interactive Agg backend to be more thread safe
 mpl.use("agg")
 from matplotlib.backends.backend_agg import RendererAgg
-_lock = RendererAgg.lock
+#_lock = RendererAgg.lock
 
 # display the sine wave
-with _lock:
-    st.pyplot(sinewave)
+#with _lock:
+#    st.pyplot(sinewave)
 
 
 if section==2:
