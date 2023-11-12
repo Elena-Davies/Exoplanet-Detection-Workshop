@@ -93,4 +93,4 @@ if section==3:
     answer = st.checkbox("See the answer", value=False)
 
     if answer:
-        st.markdown("You can the distance the exoplanet is from the host star if it has a long transit event. The longer the transit event, the further the exoplanet is from its host star!")
+        st.markdown("You can find out the distance the exoplanet is from the host star if it has a long transit event. The longer the transit event, the further the exoplanet is from its host star!")
