@@ -81,7 +81,7 @@ if section==1:
 if section==2:
     # spectra
     
-    st.markdown("Here's the emission sectrum of k2-18b and several elements, match the overall spectrum to each element's spectra")
+    st.markdown("Here's the emission spectrum of k2-18b and several elements, match the overall spectrum to each element's spectra")
 
 if section==3:
     # transit
