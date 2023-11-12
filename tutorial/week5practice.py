@@ -15,7 +15,7 @@ st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
 
 # Title the app
-st.title('Week 5 Practice')
+st.title('GCSE Transit Plan')
 
 # Define section titles
 sectiontitles = ['Main Page', 'Spectra', 'Transit']
