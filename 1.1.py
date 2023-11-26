@@ -5,6 +5,15 @@ import matplotlib as mpl
 import matplotlib.pyplot as plt
 import time
 
+#Import PyTransit and some key modules.
+from pytransit import QuadraticModel # use this for the quadratic limb-darkening law
+# from pytransit import UniformModel
+from scipy.optimize import minimize
+import numpy as np
+import matplotlib.pyplot as plt
+from astropy import units as u
+from astropy import constants as const
+
 # use the non-interactive Agg backend to be more thread safe
 #mpl.use("agg")
 from matplotlib.backends.backend_agg import RendererAgg
@@ -39,9 +48,15 @@ if section==1:
 
 if section==2:
     # transit method
-
+    st.markdown("# What is the transit method?")
+    st.write("When exoplanets (planets that orbit stars outside of our solar system) pass in front of their host star as seen from Earth, a portion of the star light is blocked out!")
     
-
+    st.markdown("# Pros")
+    st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
+    
+    st.markdown("# Cons")
+    st.write("However, the downside to the transit method is that it only works for star-planet systems that have orbits aligned that when we see it from Earth, the planet travels between us and the star.")
+    
 if section==3:
     # spectra
     
