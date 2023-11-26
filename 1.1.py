@@ -32,7 +32,10 @@ st.markdown("## {}".format(sectiontitle(section)))
 if section==1:
 
     # Add text
-    st.write("The transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system.")
+    st.write("Transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system.")
+    st.markdown("The transit method works by measuring the dimming effect that takes place when a planet passes in front of its host star. Scientists analyse this dimming effect in light curves which are graphs that show the light received over a period of time. Click on the light curve section to learn more about them!")
 
 if section==2:
     # spectra
+
+    st.markdown("Here's the emission spectrum of k2-18b and several elements, match the overall spectrum to each element's spectra")
