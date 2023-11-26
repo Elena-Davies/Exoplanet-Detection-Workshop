@@ -9,3 +9,7 @@ import time
 #mpl.use("agg")
 from matplotlib.backends.backend_agg import RendererAgg
 _lock = RendererAgg.lock
+
+# adding pages
+st.markdown("# Main page 🎈")
+st.sidebar.markdown("# Main page 🎈")
