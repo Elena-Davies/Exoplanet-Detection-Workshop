@@ -16,3 +16,6 @@ st.sidebar.markdown("# Main page 🎈")
 
 # Title the app
 st.title('A-Level Workshop: Transit Method')
+
+# Define section titles
+sectiontitles = ['Main Page', 'Transit Method', 'Spectra', 'Transit Curves']
