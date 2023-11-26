@@ -30,6 +30,7 @@ section = st.radio('Select section:', [1,2,3,4], format_func=sectiontitle)
 st.markdown("## {}".format(sectiontitle(section)))
 
 if section==1:
+#main page
 
     # Add text
     st.write("Transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system. Click on the Transit Method section to learn more!")
@@ -37,6 +38,11 @@ if section==1:
     st.write("Stars emit as blackbodies, meaning they emit all wavelengths. A star's and exoplanet's atmosphere can be discovered by analysing the emission spectra of the star as seen from Earth. Click on the Spectra section to find out more!")
 
 if section==2:
-    # spectra
+    # transit method
 
+    
+
+if section==3:
+    # spectra
+    
     st.markdown("Here's the emission spectrum of an exoplanet K2-18b")
