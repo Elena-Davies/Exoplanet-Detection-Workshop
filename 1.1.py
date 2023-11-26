@@ -65,3 +65,17 @@ if section==3:
 if section==4:
     # transit curve
      st.markdown("Here is a transit curve of an exoplanet K2-18b")
+
+    # Enter the parameters needed by the model
+     rp = 14271000 #radius of planet in metres
+     sma = 21380000000 #semi-major axis in metres
+     rs = 0.469*696340000 #radius of star in metres
+     t0 = 0.                        #time of inferior conjunction in days
+     per = 32.9                     #orbital period in days
+     rp_rs = rp/rs              #planet radius / stellar radius ratio
+     ars = sma/rs                    #semi-major axis / stellar radius ratio
+     inc =  (89.56*u.deg).to(u.rad).value      #orbital inclination (in radians) using astropy to convert to radians
+     ecc = 0.09                       #eccentricity
+     w = (-5.70*u.deg).to(u.rad).value      #longitude of periastron (in radians)
+     gamma = [1.6800, 1.1390]                 #limb darkening coefficients [u1, u2]
+     t = np.linspace(-0.05, 0.05, 1000)  #times at which to calculate light curve (days)
