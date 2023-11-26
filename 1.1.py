@@ -46,3 +46,7 @@ if section==3:
     # spectra
     
     st.markdown("Here's the emission spectrum of an exoplanet K2-18b")
+
+if section==4:
+    # transit curve
+     st.markdown("Here is a transit curve of an exoplanet K2-18b")
