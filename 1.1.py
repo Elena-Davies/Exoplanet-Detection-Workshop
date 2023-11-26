@@ -13,3 +13,6 @@ _lock = RendererAgg.lock
 # adding pages
 st.markdown("# Main page 🎈")
 st.sidebar.markdown("# Main page 🎈")
+
+# Title the app
+st.title('A-Level Workshop: Transit Method')
