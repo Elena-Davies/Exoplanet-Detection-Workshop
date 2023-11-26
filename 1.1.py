@@ -32,7 +32,7 @@ st.markdown("## {}".format(sectiontitle(section)))
 if section==1:
 
     # Add text
-    st.write("Transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system.")
+    st.write("Transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system. Click on the Transit Method section to learn more!")
     st.markdown("The transit method works by measuring the dimming effect that takes place when a planet passes in front of its host star. Scientists analyse this dimming effect in light curves which are graphs that show the light received over a period of time. Click on the light curve section to learn more about them!")
     st.write("Stars emit as blackbodies, meaning they emit all wavelengths. A star's and exoplanet's atmosphere can be discovered by analysing the emission spectra of the star as seen from Earth. Click on the Spectra section to find out more!")
 
