@@ -33,3 +33,6 @@ if section==1:
 
     # Add text
     st.write("The transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system.")
+
+if section==2:
+    # spectra
