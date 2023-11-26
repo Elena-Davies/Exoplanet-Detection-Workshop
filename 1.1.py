@@ -30,3 +30,6 @@ section = st.radio('Select section:', [1,2,3,4], format_func=sectiontitle)
 st.markdown("## {}".format(sectiontitle(section)))
 
 if section==1:
+
+    # Add text
+    st.write("The transits are used to detect exoplanets. Exoplanets are a word scientists use to refer to extrasolar planets, or planets that orbit stars outside of our solar system.")
