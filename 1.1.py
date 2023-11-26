@@ -25,3 +25,6 @@ def sectiontitle(number):
 
 # Define section
 section = st.radio('Select section:', [1,2,3,4], format_func=sectiontitle)
+
+# Write section headers
+st.markdown("## {}".format(sectiontitle(section)))
