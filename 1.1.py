@@ -22,3 +22,6 @@ sectiontitles = ['Main Page', 'Transit Method', 'Spectra', 'Transit Curves']
 # Define section titles function
 def sectiontitle(number):
     return "{0}: {1}".format(number, sectiontitles[number-1])
+
+# Define section
+section = st.radio('Select section:', [1,2,3,4], format_func=sectiontitle)
