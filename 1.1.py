@@ -19,3 +19,6 @@ st.title('A-Level Workshop: Transit Method')
 
 # Define section titles
 sectiontitles = ['Main Page', 'Transit Method', 'Spectra', 'Transit Curves']
+# Define section titles function
+def sectiontitle(number):
+    return "{0}: {1}".format(number, sectiontitles[number-1])
