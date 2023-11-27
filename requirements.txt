@@ -4,3 +4,4 @@ numpy==1.22.0
 pytransit==2.0
 scipy
 astropy
+tqdm
