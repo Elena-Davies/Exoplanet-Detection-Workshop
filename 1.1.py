@@ -1,7 +1,7 @@
 #Imports
 import streamlit as st
 import numpy as np
-import matplotlib as mpl
+#import matplotlib as mpl
 import matplotlib.pyplot as plt
 import time
 
@@ -9,8 +9,6 @@ import time
 from pytransit import QuadraticModel # use this for the quadratic limb-darkening law
 # from pytransit import UniformModel
 from scipy.optimize import minimize
-import numpy as np
-import matplotlib.pyplot as plt
 from astropy import units as u
 from astropy import constants as const
 
