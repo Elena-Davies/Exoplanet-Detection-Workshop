@@ -5,3 +5,5 @@ pytransit==2.0
 scipy
 astropy
 tqdm
+arviz
+celerite
