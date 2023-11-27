@@ -7,7 +7,7 @@ import time
 
 #Import PyTransit and some key modules.
 from pytransit import QuadraticModel # use this for the quadratic limb-darkening law
-# from pytransit import UniformModel
+from pytransit import UniformModel
 from scipy.optimize import minimize
 from astropy import units as u
 from astropy import constants as const
