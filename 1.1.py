@@ -69,6 +69,19 @@ if section==2:
     x = r * np.cos(theta)
     y = r * np.sin(theta)
 
+    # Plot the orbit
+    with _lock:
+        fig=plt.figure(figsize=(8, 8))
+        orbit=plt.plot(x, y, label='Orbit')
+        star=plt.scatter([0], [0], color='yellow', marker='o', label='Star')  # Star
+        planet=plt.scatter([x[0]], [y[0]], color='red', marker='o', label='Planet')  # Initial position of the planet
+        plt.title('K2-18 b Orbit')
+        plt.xlabel('X-axis (m)')
+        plt.ylabel('Y-axis (m)')
+        plt.legend()
+        plt.axis('equal')
+        st.pyplot(fig)
+
     st.markdown("# Pros")
     st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
     
