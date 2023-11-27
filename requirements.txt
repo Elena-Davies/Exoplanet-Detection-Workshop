@@ -11,3 +11,4 @@ emcee
 corner
 pyopencl
 uncertainties
+seaborn
