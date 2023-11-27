@@ -51,7 +51,12 @@ if section==2:
     st.markdown("# What is the transit method?")
     st.write("When exoplanets (planets that orbit stars outside of our solar system) pass in front of their host star as seen from Earth, a portion of the star light is blocked out!")
     
-
+    # Plot the planet around the star in a circular orbit
+    # Constants
+    G = 6.67430e-11  # Gravitational constant (m^3 kg^-1 s^-2)
+    M_star = 0.36*(2e3)  # Mass of the star (kg)
+    M_planet = 0.0281*1.898e27  # Mass of the planet (kg)
+    AU = 1.496e11  # Astronomical unit (m)
 
     st.markdown("# Pros")
     st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
