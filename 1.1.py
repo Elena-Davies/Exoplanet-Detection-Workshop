@@ -51,6 +51,8 @@ if section==2:
     st.markdown("# What is the transit method?")
     st.write("When exoplanets (planets that orbit stars outside of our solar system) pass in front of their host star as seen from Earth, a portion of the star light is blocked out!")
     
+
+
     st.markdown("# Pros")
     st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
     
@@ -69,13 +71,30 @@ if section==4:
     # Enter the parameters needed by the model
      rp = 14271000 #radius of planet in metres
      sma = 21380000000 #semi-major axis in metres
-     rs = 0.469*696340000 #radius of star in metres
+     rs = 0.41*696340000 #radius of star in metres
      t0 = 0.                        #time of inferior conjunction in days
      per = 32.9                     #orbital period in days
      rp_rs = rp/rs              #planet radius / stellar radius ratio
-     ars = sma/rs                    #semi-major axis / stellar radius ratio
-     inc =  (89.56*u.deg).to(u.rad).value      #orbital inclination (in radians) using astropy to convert to radians
+     ars = 74.947                    #semi-major axis / stellar radius ratio
+     inc =  (89.58*u.deg).to(u.rad).value      #orbital inclination (in radians) using astropy to convert to radians
      ecc = 0.09                       #eccentricity
      w = (-5.70*u.deg).to(u.rad).value      #longitude of periastron (in radians)
      gamma = [1.6800, 1.1390]                 #limb darkening coefficients [u1, u2]
      t = np.linspace(-0.05, 0.05, 1000)  #times at which to calculate light curve (days)
+
+     # Now instantiate an instance of the QuadraticModel class object, and enter the timegrid into the object
+     tm = QuadraticModel() # a model that uses two limb-darkening coefficients
+     tm.set_data(t)
+
+    # Add progress bar in sidebar
+     progress_bar = st.sidebar.progress(0)
+     status_text = st.sidebar.empty()
+
+     # Plot light curve
+     lc  = tm.evaluate(k=rp_rs, ldc=gamma, t0=t0, p=per, a=ars, i=inc, e=ecc, w=w)
+     plt.figure('lc')
+     plt.plot(t,lc, '-o')
+     plt.grid(True)
+     plt.ylabel('Relative signal')
+     plt.xlabel('Time (days)')
+     plt.show();
