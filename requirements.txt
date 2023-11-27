@@ -7,3 +7,5 @@ astropy
 tqdm
 arviz
 celerite
+emcee
+corner
