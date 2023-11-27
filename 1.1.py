@@ -103,3 +103,14 @@ if section==4:
      plt.ylabel('Relative signal')
      plt.xlabel('Time (days)')
      plt.show();
+
+     # Animation 
+     for i in range(1,101):
+        y = lc # y values
+        status_text.text("%i%% Complete" % i)
+        chart.add_rows([y]) # add each value
+        progress_bar.progress(i) # when progress bar is complete show "complete"
+        time.sleep(0.05)
+
+     progress_bar.empty() # clear elements by calling them empty
+     st.button("Re-run") # re-run animation
