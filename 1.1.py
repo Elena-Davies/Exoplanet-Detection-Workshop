@@ -120,12 +120,13 @@ if section==4:
 
      # Plot light curve
      lc  = tm.evaluate(k=rp_rs, ldc=gamma, t0=t0, p=per, a=ars, i=inc, e=ecc, w=w)
-     plt.figure('lc')
-     plt.plot(t,lc, '-o')
-     plt.grid(True)
-     plt.ylabel('Relative signal')
-     plt.xlabel('Time (days)')
-     plt.show();
+     with _lock:
+        plt.figure('lc')
+        plt.plot(t,lc, '-o')
+        plt.grid(True)
+        plt.ylabel('Relative signal')
+        plt.xlabel('Time (days)')
+        plt.show();
 
      # Animation 
      for i in range(1,101):
