@@ -1,6 +1,6 @@
 streamlit==1.22.0
 matplotlib==3.7.1
-numpy==1.21.5
+numpy==1.22.0
 pytransit==2.0
 scipy
 astropy
