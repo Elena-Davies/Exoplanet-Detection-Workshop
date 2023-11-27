@@ -130,9 +130,9 @@ if section==4:
 
      # Animation 
      for i in range(1,101):
-        y = lc # y values
+        x = t # x values
         status_text.text("%i%% Complete" % i)
-        chart.add_rows([y]) # add each value
+        chart.add_rows([x]) # add each value
         progress_bar.progress(i) # when progress bar is complete show "complete"
         time.sleep(0.05)
 
