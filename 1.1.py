@@ -58,6 +58,12 @@ if section==2:
     M_planet = 0.0281*1.898e27  # Mass of the planet (kg)
     AU = 1.496e11  # Astronomical unit (m)
 
+    # Initial conditions
+    a = 0.143 * AU  # Semi-major axis (m)
+    period = np.sqrt((4 * np.pi**2 * a**3) / (G * (M_star + M_planet)))  # Orbital period (s)
+    eccentricity = 0.2  # Eccentricity of the orbit
+    theta = np.linspace(0, 2 * np.pi, 1000)  # Angular positions
+
     st.markdown("# Pros")
     st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
     
