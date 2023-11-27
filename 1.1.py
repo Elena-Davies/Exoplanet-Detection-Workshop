@@ -90,6 +90,11 @@ if section==4:
      progress_bar = st.sidebar.progress(0)
      status_text = st.sidebar.empty()
 
+# Set up empty chart
+     chart = st.line_chart(np.zeros(shape=(1,1)))
+    # x values
+     x = np.arange(0, 100*np.pi, 0.1)
+
      # Plot light curve
      lc  = tm.evaluate(k=rp_rs, ldc=gamma, t0=t0, p=per, a=ars, i=inc, e=ecc, w=w)
      plt.figure('lc')
