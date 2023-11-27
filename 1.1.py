@@ -106,7 +106,7 @@ if section==4:
      t = np.linspace(-0.05, 0.05, 1000)  #times at which to calculate light curve (days)
 
      # Now instantiate an instance of the QuadraticModel class object, and enter the timegrid into the object
-     tm = QuadraticModel() # a model that uses two limb-darkening coefficients
+     tm = QuadraticModel(interpolate=False) # a model that uses two limb-darkening coefficients
      tm.set_data(t)
 
     # Add progress bar in sidebar
