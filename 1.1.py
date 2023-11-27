@@ -1,16 +1,12 @@
 #Imports
 import streamlit as st
 import numpy as np
-import matplotlib as mpl
 import matplotlib.pyplot as plt
 import time
 
 #Import PyTransit and some key modules.
 from pytransit import QuadraticModel # use this for the quadratic limb-darkening law
-from pytransit import UniformModel
-from scipy.optimize import minimize
 from astropy import units as u
-from astropy import constants as const
 
 # use the non-interactive Agg backend to be more thread safe
 #mpl.use("agg")
