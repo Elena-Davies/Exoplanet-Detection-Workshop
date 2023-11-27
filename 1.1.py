@@ -64,6 +64,11 @@ if section==2:
     eccentricity = 0.2  # Eccentricity of the orbit
     theta = np.linspace(0, 2 * np.pi, 1000)  # Angular positions
 
+    # Orbital motion equations
+    r = a * (1 - eccentricity**2) / (1 + eccentricity * np.cos(theta))
+    x = r * np.cos(theta)
+    y = r * np.sin(theta)
+
     st.markdown("# Pros")
     st.write("A big advantage for using the transit method is that the size of the planet can be determined from a light curve (more about this in the light curve section!)")
     
