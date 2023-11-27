@@ -10,3 +10,4 @@ celerite
 emcee
 corner
 pyopencl
+uncertainties
