@@ -3,6 +3,7 @@ import streamlit as st
 import numpy as np
 import matplotlib.pyplot as plt
 import time
+from scipy.optimize import minimize
 
 #Import PyTransit and some key modules.
 from pytransit import QuadraticModel # use this for the quadratic limb-darkening law
@@ -52,6 +53,7 @@ if section==2:
     M_star = 0.36*(2e3)  # Mass of the star (kg)
     M_planet = 0.0281*1.898e27  # Mass of the planet (kg)
     AU = 1.496e11  # Astronomical unit (m)
+    inc =  (89.58*u.deg).to(u.rad).value      #orbital inclination (in radians) using astropy to convert to radians
 
     # Initial conditions
     a = 0.143 * AU  # Semi-major axis (m)
@@ -63,13 +65,14 @@ if section==2:
     r = a * (1 - eccentricity**2) / (1 + eccentricity * np.cos(theta))
     x = r * np.cos(theta)
     y = r * np.sin(theta)
+    z = r * np.cos((np.pi/180.)*(90-inc)) * np.sin(theta)
 
     # Plot the orbit
     with _lock:
         fig=plt.figure(figsize=(8, 8))
-        orbit=plt.plot(x, y, label='Orbit')
+        orbit=plt.plot(x, z, label='Orbit')
         star=plt.scatter([0], [0], color='yellow', marker='o', label='Star')  # Star
-        planet=plt.scatter([x[0]], [y[0]], color='red', marker='o', label='Planet')  # Initial position of the planet
+        planet=plt.scatter([x[0]], [z[0]], color='red', marker='o', label='Planet')  # Initial position of the planet
         plt.title('K2-18 b Orbit')
         plt.xlabel('X-axis (m)')
         plt.ylabel('Y-axis (m)')
