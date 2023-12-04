@@ -98,12 +98,12 @@ if section==4:
      t0 = 0.                        #time of inferior conjunction in days
      per = 32.9                     #orbital period in days
      rp_rs = rp/rs              #planet radius / stellar radius ratio
-     ars = 74.947                    #semi-major axis / stellar radius ratio
+     ars = sma/rs                    #semi-major axis / stellar radius ratio
      inc =  (89.58*u.deg).to(u.rad).value      #orbital inclination (in radians) using astropy to convert to radians
      ecc = 0.09                       #eccentricity
      w = (-5.70*u.deg).to(u.rad).value      #longitude of periastron (in radians)
-     gamma = [1.6800, 1.1390]                 #limb darkening coefficients [u1, u2]
-     t = np.linspace(-0.05, 0.05, 1000)  #times at which to calculate light curve (days)
+     gamma = [0.083, 0.191]                 #limb darkening coefficients [u1, u2]
+     t = np.linspace(-0.1, 0.1, 1200)  #times at which to calculate light curve (days)
 
      # Now instantiate an instance of the QuadraticModel class object, and enter the timegrid into the object
      tm = QuadraticModel() # a model that uses two limb-darkening coefficients
