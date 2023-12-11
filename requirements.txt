@@ -1,0 +1,14 @@
+streamlit==1.22.0
+matplotlib==3.7.1
+numpy==1.22.0
+pytransit==2.0
+scipy
+astropy
+tqdm
+arviz
+celerite
+emcee
+corner
+pyopencl
+uncertainties
+seaborn
